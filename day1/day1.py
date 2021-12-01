@@ -15,7 +15,7 @@ def saatvik_solution(parse_data):
 	return count
 
 def arnav_soln(parse_data):
-	count = 0
+	count = -1
 	last_val = parse_data[0]
 	for i in range(1, len(parse_data) - 2):
 		suma = parse_data[i] + parse_data[i+1] + parse_data[i+2]
