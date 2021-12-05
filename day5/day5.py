@@ -1,6 +1,9 @@
 
 
 
+from typing import Counter
+
+
 max_grid = [[0 for j in range(1000)] for i in range(1000)]
 
 parsed = [[f.split(",") for f in line.replace('\n',"").split(" -> ")] for line in open("data.txt").readlines()]
@@ -83,14 +86,16 @@ for cord in misc:
 		c_l.append((cord_x_b, cord_y_b))
 	all_cds += c_l
 
-for cd in all_cds:
-	max_grid[cd[1]][cd[0]] += 1
+# for cd in all_cds:
+# 	max_grid[cd[1]][cd[0]] += 1
 
-print(max_grid)
 
-c_g_t = 0
-for row in max_grid:
-	for col in row:
-		if col >= 2:
-			c_g_t += 1
-print(c_g_t)
+# c_g_t = 0
+# for row in max_grid:
+# 	for col in row:
+# 		if col >= 2:
+# 			c_g_t += 1
+# print(c_g_t)
+# 
+# Get rekt Saatvik
+print(sum(cord_occ >= 2 for cord_occ in Counter(all_cds).values()))
