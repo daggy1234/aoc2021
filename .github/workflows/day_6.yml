@@ -11,6 +11,4 @@ jobs:
         with:
           python-version: 3.8
       - name: Run code
-        run: |
-        cd day6
-        python day6.py
+        run: cd day6 && python day6.py
