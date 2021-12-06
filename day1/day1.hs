@@ -1,3 +1,7 @@
+module Main where
+
+main :: IO ()
+
 intListParser :: String ->  [Int]
 intListParser inp = map read $ words inp
 
@@ -17,7 +21,7 @@ questionB numList minval count = nr
              then count
              else questionB (drop 1 numList) lSum (count + if lSum > minval then 1 else 0)
 
-day1 = do 
+main = do 
     parta <- readFile "data.txt"
     let intList = intListParser parta
     let out_d1 = questionA (drop 1 intList) (head intList) 0

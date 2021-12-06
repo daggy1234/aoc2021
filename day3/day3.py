@@ -10,7 +10,6 @@ def part_a():
 				cd[i].append(v)
 			except KeyError:
 				cd[i] = [v]
-	print(cd)
 
 	new_cd = {}
 	less_cd = {}
@@ -18,11 +17,8 @@ def part_a():
 		mc = Counter(v).most_common()
 		new_cd[k] = mc[0][0]
 		less_cd[k] = mc[1][0]
-	print(new_cd)
-	print(less_cd)
 
 	len_s = len(data[0])
-	print(len_s)
 	max_str = ""
 	less_str = ""
 	for i in range(len_s):
@@ -44,7 +40,6 @@ def part_b():
 	lcb_f = False
 	len_s = len(data[0])
 	for i in range(len_s):
-		print(f"i = {i}")
 		mc = Counter([val[i] for val in mc_data]).most_common()
 		mcb = mc[0][0]
 		if not mcb_f:
@@ -56,10 +51,8 @@ def part_b():
 			mcb_f = True
 		if mcb_f:
 			break
-		print(mc_data)
 
 	for i in range(len_s):
-		print(f"i = {i}")
 		lc = Counter([val[i] for val in lc_data]).most_common()
 		try:
 			lcb = lc[1][0]
@@ -69,13 +62,11 @@ def part_b():
 			if lc[0][1] == lc[1][1]:
 				lcb = '0'
 		lc_data = [val for val in lc_data if val[i] == lcb]
-		print(len(lc_data) == 1 and lcb_f == False)
 		if len(lc_data) == 1 and lcb_f == False:
 			lcb_g = lc_data
 			lcb_f = True
 		if lcb_f:
 			break
-		print(lc_data)
 
 
 	o = int(mcb_g[0], base=2)

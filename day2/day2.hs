@@ -1,4 +1,8 @@
 {-# OPTIONS_GHC -Wno-incomplete-patterns #-}
+module Main where
+
+main :: IO ()
+
 data Instruction = Instruction {instructionAction :: String, instructionValue::  Int}
 
 instructionParserLine :: String ->  Instruction
@@ -31,7 +35,7 @@ applyStepPartB instructions dir dep aim = prod
                     "down" -> applyStepPartB (drop 1 instructions) dir dep (aim + instructionValue (head instructions))
 
 
-day2 = do 
+main = do 
     parta <- readFile "data.txt"
     let parsedList = instructionParser parta
     let out_a = applyStepPartA parsedList 0 0
