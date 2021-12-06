@@ -84,12 +84,15 @@ def part_b(nums: List[int], parsed: List[GameBoard]):
             if board.check_inp_present(num):
                 to_pop.append(i)
         parsed = [parsed[i] for i, e in enumerate(parsed) if i not in to_pop]
-        print(parsed)
     losing_board = parsed_clone[parsed[0]._gid]
     for num in nums:
         if losing_board.check_inp_present(num):
             print(losing_board.summa() * num)
             break
 
-nums, boards = parse_inputs()
-part_b(nums, boards)
+if __name__ == '__main__':
+    nums, boards = parse_inputs()
+    print("Part 1:")
+    part_a(nums, boards)
+    print("Part 2:")
+    part_b(nums, boards)

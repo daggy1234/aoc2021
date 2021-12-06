@@ -41,5 +41,7 @@ part2 recur inp = if recur == 0 then sum inp else part2 (recur - 1) (tickTimerEf
 main = do 
     parta <- readFile "data.txt"
     let parsed = splitCommaString parta
+    print "Part 1:"
     print (part1 80 parsed)
+    print "Part 2:"
     print (part2 256 (initialOccurHack 9 0 [] parsed))

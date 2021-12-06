@@ -27,6 +27,8 @@ def arnav_soln(parse_data):
 
 if __name__ == '__main__':
 	parse_data = [int(v) for v in open("data.txt").readlines()]
+	print("Part 1:")
 	print(part_1(parse_data))
+	print("Part 2:")
 	print(saatvik_solution(parse_data))
 	print(arnav_soln(parse_data))

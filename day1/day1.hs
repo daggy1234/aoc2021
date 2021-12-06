@@ -25,6 +25,8 @@ main = do
     parta <- readFile "data.txt"
     let intList = intListParser parta
     let out_d1 = questionA (drop 1 intList) (head intList) 0
+    print "Part 1:"
     print out_d1
     let out_d2 = questionB (drop 1 intList) (head intList + intList !! 1 + intList !! 2) 0
+    print "Part 2:"
     print out_d2

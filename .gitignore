@@ -133,3 +133,5 @@ pyrightconfig.json
 
 # haskell
 .stack-work/
+.stack-work/
+*~

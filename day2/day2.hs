@@ -39,6 +39,8 @@ main = do
     parta <- readFile "data.txt"
     let parsedList = instructionParser parta
     let out_a = applyStepPartA parsedList 0 0
+    print "Part 1:"
     print out_a
     let out_b = applyStepPartB parsedList 0 0 0
+    print "Part 2:"
     print out_b

@@ -74,5 +74,7 @@ def part_b():
 	print(o * c)
 
 if __name__ == '__main__':
+	print("Part 1:")
 	part_a()
+	print("Part 2:")
 	part_b()

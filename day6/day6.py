@@ -3,7 +3,7 @@ import contextlib
 
 
 
-def p1():
+def p1() -> int:
 	in_states = [int(v) for v in open("data.txt").readline().split(",")]
 	for days in range(18):
 		for i,ct in enumerate(in_states):
@@ -13,9 +13,9 @@ def p1():
 			else:
 				in_states[i] -= 1
 
-	print(len(in_states))
+	return len(in_states)
 
-def p2():
+def p2() -> int:
 	in_states = dict(Counter([int(v) for v in open("data.txt").readline().split(",")]))
 	in_states[6] = 0
 	in_states[8] = 0
@@ -35,8 +35,10 @@ def p2():
 				new_d[8] = new_c
 			new_d.pop(-1)
 		in_states = new_d
-	print(sum(v for v in in_states.values()))
+	return sum(v for v in in_states.values())
 
 if __name__ == '__main__':
-	p1()
-	p2()
+	print("Part 1:")
+	print(p1())
+	print("Part 2:")
+	print(p2())
