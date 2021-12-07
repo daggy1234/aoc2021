@@ -19,5 +19,5 @@ if [ "$ver" -lt "38" ]; then
 fi
 
 echo "Running stuff"
-exec $PYNAME runner.py
+exec $PYNAME runner.py "$PYNAME"
 echo "All done"

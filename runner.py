@@ -1,5 +1,6 @@
 import os
 import subprocess
+import sys
 
 def read_output(stream,callback):
   mstr = ""
@@ -8,6 +9,9 @@ def read_output(stream,callback):
   return mstr
 
 if __name__ == "__main__":
+  print(sys.argv)
+  p_c = sys.argv[1]
+  print(f"Using `{p_c}`")
   print("Getting ALl Solutions")
   cwd = os.getcwd()
   file_list = []
@@ -20,7 +24,7 @@ if __name__ == "__main__":
   print("Initiating Run")
   for f in file_list:
     print(f'{33*"="} DAY {f[0]} {33*"="}')
-    sequence = ["/bin/bash","-c",f"cd {f[1]} && python3 {f[2]}"]
+    sequence = ["/bin/bash","-c",f"cd {f[1]} && {p_c} {f[2]}"]
     print(' '.join(sequence))
     process = subprocess.Popen(sequence, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     res = read_output(process.stdout,process.stderr)
