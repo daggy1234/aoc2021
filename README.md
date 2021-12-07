@@ -22,6 +22,9 @@ chmod +x runhaskell.sh
 ./runhaskell.sh
 ```
 
+## Solutions
+
+<!--- advent_readme_stars table --->
 
 ## License
 
