@@ -14,7 +14,14 @@ chmod +x runpy.sh
 
 ### Haskell
 
-I've always wanted to explore FP and this was a good time too. Working on a runner.
+I've always wanted to explore FP and this was a good time too. 
+Runn all Haskell solutions with ghc! Just run
+
+```sh
+chmod +x runhaskell.sh
+./runhaskell.sh
+```
+
 
 ## License
 
