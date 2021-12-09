@@ -51,7 +51,14 @@ def p2_fastest(hor_pos: List[int]):
 			fuel_dict[val] = sum([sum(range(0, abs(val - subv) + 1)) for subv in hor_pos])
 	print(min(fuel_dict.values()))
 
+def p2_godtier(hor_pos: List[int]):
+	fuel_dict = {}
+	for val in range(min(hor_pos), max(hor_pos)):
+		if not fuel_dict.get(val):
+			fuel_dict[val] = sum([[absol := abs(val - subv), (absol * (absol + 1)) // 2][1] for subv in hor_pos])
+	print(min(fuel_dict.values()))
+
 if __name__ == '__main__':
 	hor_pos = [int(v) for v in open('data.txt').readline().split(",")]
 	p1(hor_pos)
-	p2_fastest(hor_pos)
+	p2_godtier(hor_pos)
