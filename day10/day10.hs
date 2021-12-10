@@ -71,7 +71,7 @@ part2 inp = oval !! (length oval `div` 2)
         oval = sort (map  processEachLinePt2  (removeItem "" (map processEachLineFilter inp)))
 
 main = do
-    parta <- readFile "test_data.txt"
+    parta <- readFile "data.txt"
     let line_parsed = processLines parta
     print "Part 1:"
     print (part1 line_parsed)
