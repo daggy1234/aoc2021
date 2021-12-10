@@ -110,5 +110,6 @@ pyrightconfig.json
 .stack-work/
 *~
 *.hi
+*.o
 
 # Executeables

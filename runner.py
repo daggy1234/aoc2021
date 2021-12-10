@@ -19,8 +19,9 @@ if __name__ == "__main__":
     if not "." in item and item.startswith("day"):
       for file in os.listdir(item):
         if file.endswith(".py"):
-          file_list.append((int(item[-1]),f"{cwd}/{item}", file))
+          file_list.append((int(item[-2:]),f"{cwd}/{item}", file))
   file_list.sort(key = lambda x: x[0])
+  print(file_list)
   print("Initiating Run")
   for f in file_list:
     print(f'{33*"="} DAY {f[0]} {33*"="}')
