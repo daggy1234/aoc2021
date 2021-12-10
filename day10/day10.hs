@@ -5,16 +5,9 @@ import Data.Set (Set)
 import Data.List
 import qualified Data.Set as Set
 import qualified GHC.Generics as Map
-import GHC.IO (unsafePerformIO)
-import Debug.Trace (traceIO)
 
 
 main :: IO ()
-
-trace :: String -> a -> a
-trace str expr = unsafePerformIO $ do
-    traceIO str
-    return expr
 
 data InpNum = InpNum {input :: String, value::  Int}
 
