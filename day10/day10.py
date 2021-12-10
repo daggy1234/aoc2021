@@ -1,6 +1,3 @@
-exp = "{([(<{}[<>[]}>{[]{[(<()>"
-
-
 match_dict = {
 	"]": "[",
 	")": "(",
@@ -31,8 +28,8 @@ scores_b = {
 }
 
 
-
 pop_errors = []
+
 
 def topper(stack):	
 	try:
@@ -43,13 +40,12 @@ def topper(stack):
 
 def gen_missing(exp):
 	stack = []
-	corrupt = True
 	for char in exp:
 		if char in ["[", "(", "{", "<"]:
 			stack.append(char)
 		else:
 			top = topper(stack)
-			while top != match_dict[char] and top != None:
+			while top != match_dict[char]:
 				stack.pop()
 				top = topper(stack)
 			stack.pop()
@@ -60,6 +56,7 @@ def gen_missing(exp):
 	return tot
 
 def process_exp(exp):
+	global pop_errors
 	stack = []
 	corrupt = True
 	for char in exp:
