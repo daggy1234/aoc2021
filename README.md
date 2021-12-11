@@ -1,6 +1,6 @@
 # aoc2021
 
-![](https://img.shields.io/badge/day%20📅-10-blue) ![](https://img.shields.io/badge/days%20completed-10-red)
+![](https://img.shields.io/badge/day%20📅-11-blue) ![](https://img.shields.io/badge/days%20completed-10-red)
 
 My solutions that work (hopefully)
 
