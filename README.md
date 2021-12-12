@@ -1,6 +1,6 @@
 # aoc2021
 
-![](https://img.shields.io/badge/day%20📅-10-blue) ![](https://img.shields.io/badge/days%20completed-10-red)
+![](https://img.shields.io/badge/day%20📅-12-blue) ![](https://img.shields.io/badge/days%20completed-11-red)
 
 My solutions that work (hopefully)
 
@@ -41,6 +41,7 @@ chmod +x runhaskell.sh
 | [Day 8](https://adventofcode.com/2021/day/8) | ⭐ | ⭐ |
 | [Day 9](https://adventofcode.com/2021/day/9) | ⭐ | ⭐ |
 | [Day 10](https://adventofcode.com/2021/day/10) | ⭐ | ⭐ |
+| [Day 11](https://adventofcode.com/2021/day/11) | ⭐ | ⭐ |
 <!--- advent_readme_stars table --->
 
 ## License
