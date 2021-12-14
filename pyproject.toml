@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "aoc2021"
 version = "0.1.0"
-description = ""
+description = "lets try this again"
 authors = ["Arnav <arnav.jindal7@gmail.com>"]
 
 [tool.poetry.dependencies]
