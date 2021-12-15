@@ -26,7 +26,6 @@ def recur_path(top_r: Tuple[int,int], v: List[Tuple[Tuple[int,int],int]]) -> int
 			el.append(out)
 		else:
 			el.extend(out)
-	print(el)
 	return el
 
 
