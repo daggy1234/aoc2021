@@ -10,7 +10,7 @@ cds = [[int(e) for e in v[2:].split("..")] for v in ta.split(": ")[1].split(", "
 @lru_cache()
 def compute_t(iv,jv) -> Tuple[int, bool]:
 	start_loc = [0,0]
-	max_y = -999999
+	max_y = 0
 	while (not ((cds[0][0] <= start_loc[0] <= cds[0][1]) and (cds[1][0] <= start_loc[1] <= cds[1][1]))):
 		start_loc[0] += iv
 		start_loc[1] += jv
@@ -40,7 +40,7 @@ for i in range(-1000,1000):
 	for j in range(-1000,1000):
 		out,s = compute_t(i,j)
 		if s:
-			maxs.append(abs(out))
+			maxs.append(out)
 print(max(maxs))
 print(len(maxs))
 
