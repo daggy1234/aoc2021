@@ -9,6 +9,6 @@ jobs:
       - name: Install Python 3
         uses: actions/setup-python@v1
         with:
-          python-version: 3.8
+          python-version: 3.9
       - name: Run code
-        run: cd day15 && python day15.py
+        run: cd day17 && python day17.py
