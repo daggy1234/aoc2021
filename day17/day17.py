@@ -1,5 +1,6 @@
 from typing import Tuple
 from functools import lru_cache
+import math
 
 # ta = "target area: x=20..30, y=-10..-5"
 ta = "target area: x=175..227, y=-134..-79"
@@ -26,13 +27,19 @@ def compute_t(iv,jv) -> Tuple[int, bool]:
 
 	return 0,False
 
+# def cmh(iv,jv):
+# 	v = ((iv ** 2) + (jv ** 2))
+# 	st = (iv / jv) ** 2
+# 	print((v * st) / 2)
+
 
 maxs = []
 for i in range(-1000,1000):
 	for j in range(-1000,1000):
 		out,s = compute_t(i,j)
 		if s:
-			maxs.append((out,(i,j)))
-print(max(maxs,key=lambda x : x[0]))
+			maxs.append(out)
+print(max(maxs))
+
 
 # (1225, (20, 49))
